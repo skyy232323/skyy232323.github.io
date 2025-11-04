@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- 
+    Projet  : Cinema
+    Détails : Achat de billets de cinéma
+    Auteur  : ALIPRANDI MOTA (c) 2023 CFPT-I
+    Date    : created on 03.08.2023
+    Version : V1.0
+-->
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/cinema.css">
+		<title>MyCinema</title>
+	</head>
+	<body>
+		<main>
+			<section id="onglet1">
+				<h1>MyCinema</h1>
+				<h2>Formulaire de réservation</h2>
+				<p id="errors"></p>
+				<form id="reservationForm">
+					<label for="film">Film</label>
+					<select id="film" name="filmChoisi">
+						<option value="">Choisissez un film</option>                    
+					</select><br>
+					<label for="lunettes">Supplément pour lunettes 3D</label>
+					<label for="lunettesOui"><input type="radio" id="lunettesOui" name="lunettes" value="oui">Oui</label>
+					<label for="lunettesNon"><input type="radio" id="lunettesNon" name="lunettes" value="non" checked>Non</label><br>
+					<label for="places">Choisir un nombre de places</label>
+					<input type="range" min="0" max="10" id="places" name="places"><br>
+					<p id="nbPlacesDisplay">5</p>
+					<label for="nom">Nom pour la réservation</label>
+					<input type="text" id="nom" name="nom" placeholder="Entrez votre nom"><br>  
+					<button type="submit" id="reserver">Réserver</button>                
+				</form>
+			</section>
+			<section id="onglet2">
+				<h1>MyCinema</h1>
+				<h2>Récapitulatif de la réservation</h2>
+				<article>
+					<p>Merci <span id="nomUtilisateur"></span>!</p>
+					<p>Vos <span id="placesReservees"></span> places pour <span id="filmChoisi"></span> sont bien reservées.</p>                                   
+					<div>
+						<img id="imageFilm" src="" alt="Film choisi">	
+					</div>					
+					<p>Montant total à régler sur place <span id="prix"></span><span>CHF</span></p>
+				</article>
+				<button type="button" id="retour">Retour</button>
+			</section>
+		</main>
+		<script src="js/commande.js"></script>
+	</body>
+</html>
