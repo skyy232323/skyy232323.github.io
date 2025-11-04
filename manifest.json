@@ -1,0 +1,12 @@
+{
+    "lang": "fr",
+    "name": "Cinemax",
+    "description": "Command ton film sur Cinemax!",
+    "short_name": "Cinemax",
+    "scope": "/",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "any",
+    "theme_color": "#000000",
+    "background_color": "#1e90ff"
+}
